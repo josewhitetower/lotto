@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LotteryBall from "./LotteryBall";
 export default class Lottery extends Component {
   static defaultProps = {
-    title: "",
+    title: "Lottery",
     numBalls: 10,
     maxNum: 100
   };
