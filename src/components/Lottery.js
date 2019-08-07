@@ -7,11 +7,12 @@ export default class Lottery extends Component {
     maxNum: 100
   };
 
-  state = {
-    nums: Array.from({ length: this.props.numBalls }, () =>
-      Math.floor(Math.random() * this.props.maxNum + 1)
-    )
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      nums: Array.from({ length: this.props.numBalls })
+    };
+  }
 
   generateBalls = () =>
     Array.from({ length: this.props.numBalls }, () =>
